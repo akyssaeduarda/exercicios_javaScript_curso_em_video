@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condiçoes compostas</title>
+</head>
+<body>
+    <h1>É gringo ou num ÉÉÉ?</h1>
+    
+    Escreva a nascionalidade: <input type="text" name="pergunta" id="pergunta">
+    
+    <input type="button" value="é gringo?" onclick="clicar()">
+    
+    <p id="para"></p>
+    
+    <script>
+        function clicar(){
+            var p = document.getElementById('para')
+            
+            var pergunt = document.getElementById('pergunta')
+            var pe = pergunt.value
+           
+            if(pe == "Brasil"){
+                p.innerHTML = `É Brasileire`
+            
+            }else{
+                p.innerHTML = `É Gringo!`
+            }
+        
+        }
+
+    
+       
+    </script>
+</body>
+</html>

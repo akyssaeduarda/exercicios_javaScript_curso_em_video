@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio aula 06 javascript curso em video </title>
+   
+   <style>
+        /* Isso é um comentário
+        h1{
+            color:#ffffffe3;
+
+        }
+        
+        .p1{
+            color:#ffffffe3;       
+        }
+        */
+        
+
+        body{
+            background-color:#5612b5a6 ;
+            color:rgb(255, 255, 255);
+            font: normal 25pt arial;
+        }
+        
+        
+    </style>
+
+</head>
+<body>
+    <!--Isso é um comentário
+    <h1>Hello Word!</h1>
+    
+    <p class="p1">Tu ainda vai voar muito,nega!</p>-->
+
+    <script>
+        //Formatação de numeros
+        var n1 = 1545.5
+        
+        
+        /*document.write(n1.toFixed(2).replace('.',',')) 
+        - esse comando vai adicionar uma casa decimal e trocar o ponto por virgula 
+        n1 - nome da variavel
+        .tofixed() - comando para adicionar casas decimais 
+        .replace('','') - comando para trocar tal por tal. ex: .replace('.',',') vai trocar o ponto por virgula */
+        
+        document.write(n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}))
+        /* esse comando vai localizar para o brasil o estilo dinhero para real, ou seja, ele vai localizar e transformar para real 
+        {style: 'currency', currency: 'BRL'} - é um obejto em javascrit (esse assunto vou estudar mais na frente)
+       
+        n1 - nome da variavel 
+        .toLocaleString - localizar string
+        pt-BR - português brasil 
+        style: estilo 
+        currency - dinherio 
+        
+        */ 
+    
+    </script>
+
+</body>
+</html>

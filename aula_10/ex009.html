@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+</head>
+<body>
+    <h1>Digite os números para somar</h1>
+    <input type="number" id="number1" name="numero1">
+    <input type="number" id="number2" name="numero2">
+    <button id="botao" onclick="somar()">Somar</button>
+    <p id="paragrafo"></p>
+    
+    <script>
+        
+        
+        function somar(){
+            let number1 = document.getElementById('number1')
+            let number2 = document.getElementById('number2')
+            let pa = document.getElementById('paragrafo')
+           
+            let num1 = Number(number1.value)
+            let num2 = Number(number2.value)
+            let soma = num1 + num2
+
+            pa.innerHTML = (`a soma dos numeros <strong><mark>${num1}<mark></strong> + <strong><mark>${num2}</mark></strong> resulta no valor <strong><mark>${soma}</mark></strong> `)
+
+
+        }
+
+
+    </script>
+
+</body>
+</html>

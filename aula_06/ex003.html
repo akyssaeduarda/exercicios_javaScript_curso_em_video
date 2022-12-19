@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio aula 06 javascript curso em video </title>
+   
+   <style>
+        /* Isso é um comentário*/
+        h1{
+            color:#eeee00e3;
+
+        }
+        
+        body{
+            background-color:#5612b5a6 ;
+            color:rgb(255, 255, 255);
+            font: normal 15pt arial;
+        }
+        
+        .p1{
+            color:#f5f506;       
+        }
+    
+    </style>
+
+</head>
+<body>
+    <!--Isso é um comentário-->
+    <h1>Hello Word!</h1>
+    
+    <p>Já me livrei da maldição</p>
+    
+    <p class="p1">Tu ainda vai voar muito,nega!</p>
+
+    <script>
+        /* o usuario vai digirar um numero e esse numero vai ser guardado na variavel n1.
+        porem o 'widnow.prompt' retorna como uma string. mesmo que você digite um numero ele vai interpretar como uma string 
+        
+        var n1 = window.prompt('Digite um número:')
+        
+        // o usuario vai digitar outro numero e ese numero vai ser armazenado na n2. porem vai ser guardado como uma string
+        
+        var n2 = window.prompt('Digite outro número:')
+        
+        // variavel que resulta a soma n1 + n2. Para fazer a soma de n1 + n2 como numeros voce vai ter que adicionar um codigo que converta a string para numero  
+        
+        var s = n1 + n2 
+        
+        //(number + number) para adição
+        //(string + string) para concatenação
+       
+        // o window.alert vai concatenar (+) a frase e o valor que se encontra dentro da variavel 's'. 
+        
+        window.alert( 'a soma dos dois números é: ' + s)
+        
+        POREM, TEM UM PROBLEMA NESSES CÓDIGOS, O NUMERO QUE VOCÊ VAI ESCREVER VAI
+        SER LIDO PELO CODIGO EM FORMA DE 'STRING' E NAO DE 'NUMERO', ENTÃO QUANDO VOCÊ FOR 
+        CONCATENAR ELE VAI JUNTAR UMA STRING MAIS OUTRA. EX: 2 + 2 VAI APARECER NO ALERT COMO '22'
+        E NÃO COMO '4'. ISSO ACONTECE PORQUE VOCÊ NÃO COLOCOU NENHUM CÓDIGO QUE TRANFORME ESSA STRING PARA NÚMERO.*/
+
+        //Number.parseInt(n) - converte de string para um número inteiro 
+        //Number.parseFloar(n) - converte de string para numero real (tem ponto)
+        //Number - vai corverter de uma string tanto para real quanto para inteiro 
+
+        var n1 = Number(window.prompt('Digite um numero:'))
+        var n2 = Number(window.prompt('Digite o segundo numero '))
+        var s = n1 + n2
+        
+        window.alert(`A soma de ${n1} e ${n2} é igual a ${s} `)
+
+        
+
+
+    </script>
+
+</body>
+</html>

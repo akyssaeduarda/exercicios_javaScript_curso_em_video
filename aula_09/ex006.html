@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+    <head>
+        <title>Primeiros passos com DOM</title>
+        <meta charset="UTF-8" >    
+        <style>
+            body{
+                background: rgba(159, 46, 230, 0.722);
+                color:white;
+                font: normal 15pt Arial;
+            }
+
+            div{
+                margin-top: 250px;
+            }
+
+        </style>    
+    </head>
+
+    <body>
+        <h1> Iniciando estudos DOM  </h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+        <div id="msg">Clique em mim</div>
+        
+        <script>
+           /* DOM */
+           /* Selecionando elementos para navegar dentro da arvore Dom.
+            Pode selecionar por tagName, Id, Nome, Classe e Seletor. 
+            
+            tagname - getElementsByTagName() [] - seleciona o objeto/elemento com base no nome da sua tag, e o colchete [] para selecionar qual tag vai usar,se houver mais de uma igual, vai usar assim:  [0] para a primeira tag, [1] para a segunda, [2] para a terceira, e assim em diante. 
+            
+            Id - getElementById() - seleciona o objeto com base no seu id 
+            
+            Name - getElementsByName()[] - seleciona o objeto com base no seu no nome 
+            
+            Classe - getElemensByClassName() [] - seleciona o objeto com base na sua classe  
+            
+            Seletor - forma mais nova, se usa quando o vai precisar usar um Id ou Class
+            */
+            
+            /*                  Marca  
+           
+            getElementsByTagName()[] - Consegue selecionar mais de um objeto  
+            var p1 =window.document.getElementsByTagName('p')[1] - vai guardar na variavel p1 o valor do paragrafo 'p', como o termo 'getElementsByTagName'
+            tem uma conotação de plural, usa-se o colchete '[]' com o numero da posição do vetor/objeto dentro.
+         Sempre começa a contar a partir do '0'*/
+            var p1 = window.document.getElementsByTagName('p')[1]
+
+            /*var corpo = window.document.body - esta guardando dentro da variavel 'corpo' 
+            o body */
+            var corpo = window.document.body 
+
+           /* O window.document.write(p1.innerText) vai mostrar na tela o paragrafo p1  
+            a propriedade 'innerText' mostra o conteudo de texto que esta dentro da tag (no caso desse exemplo o 'p'), porem vai mostrar so os textos. se tiver alguma tag para complementar os textos ele não mostra
+        
+           window.document.write('A qui vai o resultado desse babado: ' +  p1.innerText)
+
+            (p1.style.color = 'blue' -  vai tranformar a cor da paragrafo 'p' que esta como valor na 'p1' para azul)
+            
+            p1.style.color = 'blue'
+
+
+           ( corpo.style.background = 'black' -  vai mudar a cor para preto {pode ser em formato de string 'black' ou hexadeciaml ou rgb, tanto faz, mas tem que botar entre aspas}) 
+           
+            corpo.style.background = "rgb(0, 0, 0)"
+
+            
+           ( p1.style.background = 'yellow' -  vai adicionar uma cor de fundo da variavel que tem o valor p1) 
+           
+            p1.style.background = 'yellow'
+            
+            
+            (window.documet.write(p1.innerHTML) - esse comando mostra o texto que esta dentro da tag, incluindo as tags filhas html, que diferente do innerText, mostra as tags html)  
+            
+            window.document.write(p1.innerHTML)
+            */
+            
+           
+           /*             Id
+           
+            exemplo de como fica o identificador no html ->  <div id="msg">Clique em mim</div>
+
+           //salvou numa variavel o elemento com id 'msg'
+            var id = window.document.getElementById('msg')
+
+           //selecionou a variavel com nome id e aplicou uma cor de fundo nela 
+            id.style.background = 'green'
+
+            //odifica o texto do elemento que antes tinha uma frase, agora é outra.
+            id.innerText= 'estou aguardando...' - essa forma ela é resumida 
+           
+            id.innerText= 'estou aguardando...' 
+
+
+            //forma por extenso  
+
+            window.document.getElementById('msg').innerText = 'testando mais uma vez!'
+            */
+        
+            /*           Name
+            
+            * exemplo de como fica o endificador no html -->  <div name="msg">Clique em mim</div>
+
+            vai guardar dentro da variavel 'n' o valor do identificador 'nome'. 
+            assim como outros, o getElementsByName tem o 's' de plural, então se coloca a 
+            chaves[] para identificar qual 'name' vai usar.
+            pois possa ser que no seu codigo tenha varias tags con identificadores 'name' 
+            //var n = window.document.getElementsByName('msg')[0]
+           
+           
+            o n.innerText = '...' ou "..." ou  `...` - vai aparecer na tela o texto que você botar dentro. 
+            se voce usasse o 'innerHTML' iria  mostrar alem so texto, as tags que tem dentro.
+            pode usar aspas simples (''), aspas duplas (""), ou craze (``) 
+           // n.innerText = `ola! Eduarda. Vamos terminar esse modulo? Tu so vai almoçar quando terminar! ;D` */
+
+           
+           
+           /*            Seletor
+            
+            querySelector() - quando for singular
+            querySelectorAll() - quando for plural 
+            Explicando como o Selector funciona: ele fucniona tanto para
+            id quanto para classe.
+            
+            *exemplo de quando for id: no html -> <div id="msg">Clique em mim</div>
+            no javascript window.document.querySelector('div#msg'). 
+            
+            quando for id se usa o # e quando for classe usa-se ponto (.)
+            
+            *exemplo de quando for classe: no html -> <div class="msg">Clique em mim</div>
+            no javascript -> window.document.querySelector('div.msg')*/            
+           
+            var s = window.document.querySelector('div#msg')
+            s.style.background = 'black'
+            s.innerText = 'e ai bbzona, ja esta quse acabando esse video'
+            
+
+
+
+
+
+
+
+        </script>
+    </body>
+
+</html>

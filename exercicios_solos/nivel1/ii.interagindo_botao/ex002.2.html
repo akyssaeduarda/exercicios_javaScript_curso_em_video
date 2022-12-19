@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>botão</title>
+        <style>
+            body{
+                background:#00000052;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Testando eventos com botão</h1>
+        
+        <button class="botao" onclick="clicar()" >Clique em mim!</button>
+        
+        <p id="paragrafo"></p>
+        
+        <script>
+           function clicar(){
+             document.getElementsByTagName('h1')[0].innerHTML = 'Funcionou!';
+
+             document.getElementById('paragrafo').innerHTML = 'Você clicou no botão!';
+
+             document.getElementsByClassName('botao')[0].innerHTML = 'PARABÉNS!';
+
+             document.querySelector('.botao').style.background = 'pink'
+
+            }
+            
+        </script>
+    </body>
+</html>

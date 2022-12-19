@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incorporando o DETRAN</title>
+</head>
+<body>
+    <h1>Incorporando o DETRAN</h1>
+    
+    Kilometrgem:<input type="number" name="km/h" id="klh">
+    
+    <input type="button" value="calcular" id="calcular" onclick="clicar()">
+
+    <p id="paragrafo"></p>
+    
+    <script>
+        function clicar(){
+        
+            var vel = window.document.getElementById('klh');
+
+            var pa = document.getElementById('paragrafo');
+
+            pa.innerHTML = `<p>O veiculo está a  <strong>${vel.value}km/h</strong></p><br>`
+
+            //precisei usar o value pq esqueci de converter a var vel para um numero (var vel2 = Number(vel.value))
+            if(vel.value > 60){
+                pa.innerHTML += `<p>Você foi <strong>MULTADE</strong>por dirigir acima da velicidade permitida</p><br>`
+            };
+
+            pa.innerHTML += `<p>Não esqueça do sinto de segurança</p>`
+
+    
+        }
+    </script>
+</body>
+</html>

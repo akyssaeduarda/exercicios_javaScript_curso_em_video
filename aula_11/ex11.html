@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo a nacionalidade</title>
+</head>
+<body>
+    
+    <h1> Descobrindo a nacionalidade</h1>
+    <h3>digite o nome do seu país</h3>
+    <input type="text" name="texto" id="pais">
+    <input type="button" value="Descobrir" onclick="iniciar()">
+    <p id="paragrafo"></p>
+
+    <script>
+        function iniciar(){
+        
+            var text = document.getElementById("pais")
+            var pa = document.getElementById("paragrafo")
+
+            var pais = text.value
+            
+            if(pais == 'brasil'){
+                pa.innerHTML = 'Você é brasileire &#128184;'
+            }else{
+                pa.innerHTML = "Você é grigo! &#128178; &#128178; &#128178 "
+            }
+
+        }
+    </script>
+
+</body>
+</html>

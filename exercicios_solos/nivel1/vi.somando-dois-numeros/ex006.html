@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando dois numeros</title>
+</head>
+<body>
+    
+    <h1>Somando dois números</h1>
+    
+    <button onclick="clique()">Aperte para somar</button>
+    
+    <p id="paragrafo">Aqui vai aparecer o resultado</p>
+    
+    <script>
+        function clique(){
+            let n1 = Number(window.prompt('Digite o primeiro número:'));
+            let n2 = Number(window.prompt('Digite o segindo número:'));
+            let paragr = document.getElementById('paragrafo');
+            
+            paragr.innerHTML = ` a soma dos números <mark>${n1}</mark> e <mark>${n2}</mark> resulta no valor <strong>${n1+n2}</strong>  `
+
+        }
+    </script>
+</body>
+</html>

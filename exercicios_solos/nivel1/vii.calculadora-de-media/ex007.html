@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculanodo media </title>
+    <style>
+        h1{
+            font: bold 30px monospace;
+        }
+        button{
+            font: bold 13px monospace;
+            height: 60px;
+            
+        }
+        section{
+            font: bold 18px monospace;
+        }
+    </style>
+</head>
+<body>
+   <h1> Calculando média usando botão e Dom </h1>
+   
+   <button onclick="iniciar()">Clique aqui para iniciar</button>
+  
+   <section id="section1" >
+        <p id="para"> o resutado ira aparecer aqui </p>
+        <p id="para2"></p>
+        <p class="para3"></p>
+    </section>
+  
+    <script>
+       //função que iniciará quano o botão for clicado
+       function iniciar(){
+            //variavel para armazenar o nome 
+            let nome = window.prompt('Digite o nome do aluno:')
+            //variavel para armazenar a nota 1 
+            let nota1 = Number(window.prompt(`Olá ${nome}, digite a sua primeira nota:
+            `));
+            //variavel que armazena a nota 2 
+            let nota2 = Number(window.prompt(`${nome}, a sua primeira nota foi ${nota1}. Agora digite a segunda nota:`));
+            //variavel que faz a conta da média e armazena ela 
+            let media = (nota1 + nota2)/2 ; 
+            
+            //comanados do dom que seleciona elementos(tags) e manipula eles
+            //nesse caso ele seleciona a tag por meio do 'querySelector' e manipula ele para aparecer uma frase com valores de variaveis dentro 
+            document.querySelector('#para').innerHTML = `Calculando a média de <strong><mark>${nome}</mark></strong>.`
+
+            //comando que seleciona a tag p por meio da 'tagname' e manipula para mostrar as notas n1 e n2 
+            document.getElementsByTagName('p')[1].innerHTML = `A sua primeira nota foi <mark>${nota1}</mark> e a segunda foi <mark>${nota2}</mark>`
+
+            //comando que seleciona a tag p por maio da classe e manipula para mostrar a media 
+            document.getElementsByClassName('para3')[0].innerHTML = `A sua media final foi <mark>${media}<mark>`
+        }
+   
+    </script>    
+
+</body>
+</html>
+

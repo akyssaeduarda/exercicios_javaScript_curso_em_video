@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+       body{
+        background:rgba(0, 0, 0, 0.434);
+       }
+       div#area{
+            background:green;  /*adiciona uma cor de fundo*/
+            font:normal 20px monospace ;
+            color:white;
+            width: 20%; /*define a largura*/
+            height: 150px; /*define a altura*/
+            line-height:150px; /*altura da linha*/
+            text-align:center; /*define o alinhamento do texto*/
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- a div esta com os disparadores de evento dentro dela no html -->
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="sair()" > Interaja... </div>
+
+    <script>
+        /*A var esta do lado de fora da function para que ela se comporte como uma função global.
+        Se colocar ela dentro de uma função ela so vai funcionar para aquela função expecifica, e as demais não vai funcionar.*/ 
+        var di = document.getElementById('area')
+        
+        function clicar(){ //diparou a funçao clicar
+            
+            di.innerHTML = 'Você clicou!' //a var di vai subscrever o que tem dentro para 'voce clicou'
+            
+            di.style.background = 'pink' //muda a cor da div
+        }
+        function entrou(){ //disparou a função onmouseenter, que vai interafir com a div quando o mause entra dentro dela 
+              
+            di.innerHTML = 'Entrou'
+
+            di.style.background = 'red'
+
+        }
+        function sair(){ //disparou o onmouseout, que dispara um evento quando o mouse sai da div 
+            di.innerHTML = 'Você saiu'
+            di.style.background = 'black'
+        }
+    </script>
+
+
+
+</body>
+
+</html>

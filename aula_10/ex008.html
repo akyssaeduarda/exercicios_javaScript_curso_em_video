@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando dom</title>
+    <style>
+        body{
+            background:rgba(0, 0, 0, 0.434);
+        }
+        div#area{
+             background:green;  /*adiciona uma cor de fundo*/
+             font:normal 20px monospace ;
+             color:white;
+             width: 20%; /*define a largura*/
+             height: 150px; /*define a altura*/
+             line-height:150px; /*altura da linha*/
+             text-align:center; /*define o alinhamento do texto*/
+         }
+     </style>
+</head>
+<body>
+    <div id="area"> Interaja... </div>
+    
+    <script>
+        var di = window.document.getElementById('area')
+        //adiciona o eventlistener para ouvir o evento, nesse caso é o 'click','mouseenter', e 'mouseout'
+        di.addEventListener('click', clicar)
+        di.addEventListener('mouseenter', entrou)
+        di.addEventListener("mouseout", sair)
+        function clicar(){
+            di.innerHTML= 'Clicou!'
+            di.style.background = 'red'
+        }
+        function entrou(){
+            di.innerHTML = 'Entrou!'
+        }
+        function sair(){
+            di.innerHTML = "Saiu!"
+            di.style.background = 'green'
+
+        }
+    
+    </script>
+</body>
+</html>
